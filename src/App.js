@@ -32,12 +32,11 @@ function App() {
     },
   ]);
 
-  const newExpenseHandler = expense => setExpenses(expenses.concat(...expense))
+  const newExpenseHandler = expense => setExpenses(expenses.concat(expense))
   return (
     <div>
       <NewExpense onNewExpense={newExpenseHandler}/>
       <Expenses items={expenses}/>
-      
     </div>
   );
 }
