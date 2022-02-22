@@ -31,7 +31,7 @@ const App = () => {
     },
   ]);
 
-  const newExpenseHandler = expense => setExpenses(expenses.concat(expense))
+  const newExpenseHandler = expense => setExpenses((prevExpenses) => [expense, ...prevExpenses])
   return (
     <div>
       <NewExpense onNewExpense={newExpenseHandler}/>
