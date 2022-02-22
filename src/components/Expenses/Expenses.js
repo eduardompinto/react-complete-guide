@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 import './Expenses.css'
 
@@ -12,6 +12,7 @@ function Expenses(props) {
           title={expense.title}
           date={expense.date}
           amount={expense.amount}
+          key={expense.id}
         />
       ))}
     </Card>
