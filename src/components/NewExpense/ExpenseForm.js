@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
     setNewExpenseClicked((prevShowBanner) => !prevShowBanner);
   };
 
-  const fullBanner = (
+  const submitExpense = (
     <div className="new-expense__controls">
       <div className="new-expense__control">
         <label>Title</label>
@@ -60,7 +60,7 @@ const ExpenseForm = (props) => {
     </div>
   );
 
-  const shortBanner = (
+  const newExpenseButton = (
     <div className="new-expense__controls">
       <div className="new-expense__actions">
         <button type="submit">Add New Expense</button>
@@ -69,7 +69,7 @@ const ExpenseForm = (props) => {
   );
 
   return <form onSubmit={submitHandler}>
-    {newExpenseClicked ? fullBanner : shortBanner }
+    {newExpenseClicked ? submitExpense : newExpenseButton }
   </form>;
 };
 
